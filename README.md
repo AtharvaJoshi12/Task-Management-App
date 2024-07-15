@@ -19,28 +19,17 @@ A simple full-stack task management application built with FastAPI, SQLAlchemy, 
    cd backend
    ```
 
-2. **Create a virtual environment:**
+2. **Install dependencies:**
 
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   pip install fastapi sqlalchemy uvicorn pydantic
    ```
 
-3. **Install dependencies:**
-
-   ```bash
-   pip install fastapi[all] sqlalchemy psycopg2-binary
-   ```
-
-4. **Run the database migrations:**
-   Ensure your database is set up and update your connection string in `database.py` if necessary. Run:
-
+3. **Run the backend:**
    ```bash
    uvicorn main:app --reload
    ```
 
-5. **Access the API:**
-   The backend will be available at `http://localhost:8000/api`.
 
 ### Frontend Setup
 
