@@ -1,4 +1,3 @@
-````markdown
 # Task Management App
 
 A simple full-stack task management application built with FastAPI, SQLAlchemy, and React. This application allows users to create, update, delete, and filter tasks, with a user-friendly interface.
@@ -19,7 +18,6 @@ A simple full-stack task management application built with FastAPI, SQLAlchemy, 
    git clone <repository-url>
    cd backend
    ```
-````
 
 2. **Create a virtual environment:**
 
