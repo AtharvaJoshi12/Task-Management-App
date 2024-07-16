@@ -1,4 +1,3 @@
-````markdown
 # Task Management App
 
 A simple full-stack task management application built with FastAPI, SQLAlchemy, and React. This application allows users to create, update, delete, and filter tasks, with a user-friendly interface.
@@ -19,30 +18,18 @@ A simple full-stack task management application built with FastAPI, SQLAlchemy, 
    git clone <repository-url>
    cd backend
    ```
-````
 
-2. **Create a virtual environment:**
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
-
-3. **Install dependencies:**
+2. **Install dependencies:**
 
    ```bash
-   pip install fastapi[all] sqlalchemy psycopg2-binary
+   pip install fastapi sqlalchemy uvicorn pydantic
    ```
 
-4. **Run the database migrations:**
-   Ensure your database is set up and update your connection string in `database.py` if necessary. Run:
-
+3. **Run the backend:**
    ```bash
    uvicorn main:app --reload
    ```
 
-5. **Access the API:**
-   The backend will be available at `http://localhost:8000/api`.
 
 ### Frontend Setup
 
