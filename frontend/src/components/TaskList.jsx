@@ -12,7 +12,9 @@ const TaskList = ({ tasks, onUpdate }) => {
     setLoading(true);
     setError("");
     try {
-      await axios.delete(`http://localhost:8000/api/tasks/${taskId}`);
+      await axios.delete(
+        `https://backend-lilac-eight-13.vercel.app/api/tasks/${taskId}`
+      );
       onUpdate();
     } catch (error) {
       console.error("Error deleting task:", error);
@@ -26,9 +28,12 @@ const TaskList = ({ tasks, onUpdate }) => {
     setLoading(true);
     setError("");
     try {
-      await axios.put(`http://localhost:8000/api/tasks/${taskId}`, {
-        status: newStatus,
-      });
+      await axios.put(
+        `https://backend-lilac-eight-13.vercel.app/api/tasks/${taskId}`,
+        {
+          status: newStatus,
+        }
+      );
       onUpdate();
     } catch (error) {
       console.error("Error updating task:", error);

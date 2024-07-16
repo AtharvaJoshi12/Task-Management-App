@@ -12,7 +12,7 @@ const TaskForm = ({ onUpdate }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8000/api/tasks", {
+      await axios.post("https://backend-lilac-eight-13.vercel.app/api/tasks", {
         title,
         description,
         status,

@@ -9,8 +9,16 @@ const App = () => {
   const [tasks, setTasks] = useState([]);
 
   const fetchTasks = async () => {
-    const response = await axios.get("http://localhost:8000/api/tasks");
-    setTasks(response.data);
+    try {
+      console.log("Fetching tasks...");
+      const response = await axios.get(
+        "https://backend-lilac-eight-13.vercel.app/api/tasks"
+      );
+      console.log("Tasks fetched:", response.data);
+      setTasks(response.data);
+    } catch (error) {
+      console.log("Error fetching tasks:", error);
+    }
   };
 
   useEffect(() => {
