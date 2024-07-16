@@ -11,9 +11,7 @@ const App = () => {
   const fetchTasks = async () => {
     try {
       console.log("Fetching tasks...");
-      const response = await axios.get(
-        "https://backend-lilac-eight-13.vercel.app/api/tasks"
-      );
+      const response = await axios.get("http://localhost:8000/api/tasks");
       console.log("Tasks fetched:", response.data);
       setTasks(response.data);
     } catch (error) {
